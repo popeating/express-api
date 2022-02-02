@@ -1,16 +1,20 @@
 {
   "name": "express-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express API and JWT example",
   "main": "index.js",
   "scripts": {
+    "prod": "node server.js",
     "test": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
+    "bcrypt": "^5.0.1",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

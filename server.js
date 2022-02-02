@@ -1,13 +1,18 @@
 const express = require('express');
+const dotenv = require('dotenv');
+
+dotenv.config();
+// console.log(process.env.SECRET_TOKEN);
 
 // Create express app
 const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
   res.json({ message: 'Hello, World!' });
 });
 

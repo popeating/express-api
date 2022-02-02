@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../data/books');
+const { verifyToken } = require('../middleware/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', verifyToken, async (req, res) => {
+  //    console.log(req.decoded);
   res.json({ message: 'All Books', books: db.books });
 });
 
