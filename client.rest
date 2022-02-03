@@ -1,0 +1,35 @@
+### Main Route
+http://localhost:3000/
+
+###Password generation (Return a cripted password)
+POST http://localhost:3000/v1/auth/generatepassword
+Content-Type:  application/x-www-form-urlencoded
+
+password=password
+
+###Sign in with user name and password
+POST http://localhost:3000/v1/auth/signin
+Content-Type: application/json
+
+{"user":"username","password":"password"}
+
+###Get all books (Require Authorization Token)
+GET http://localhost:3000/v1/books/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidXNlcm5hbWUiLCJlbWFpbCI6Im1lQGhvbWUub3JnIiwibGV2ZWwiOiIwIiwiaWF0IjoxNjQzODc2MjY3LCJleHAiOjE2NDM4Nzk4Njd9.oprmV-xt3YaivhXcevkw3mriAokBhUCDEI0bnpKZT3I
+
+###Get single book by id (Require Authorization Token)
+http://localhost:3000/v1/books/get/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidXNlcm5hbWUiLCJlbWFpbCI6Im1lQGhvbWUub3JnIiwibGV2ZWwiOiIwIiwiaWF0IjoxNjQzODc2MjY3LCJleHAiOjE2NDM4Nzk4Njd9.oprmV-xt3YaivhXcevkw3mriAokBhUCDEI0bnpKZT3I
+
+###Refresh JWT token (require refresh token return a new JWT and refresh token)
+POST http://localhost:3000/v1/auth/refresh
+Content-Type:  application/x-www-form-urlencoded
+
+refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidXNlcm5hbWUiLCJlbWFpbCI6Im1lQGhvbWUub3JnIiwibGV2ZWwiOiIwIiwiaWF0IjoxNjQzODc2ODAxLCJleHAiOjE2NDY0Njg4MDF9.6v5IdBUOn5uAVbmTRx1BLAtZft8SDZ_QwW4O0dOkF1s
+
+
+
+
+
