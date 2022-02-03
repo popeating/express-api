@@ -50,7 +50,7 @@ const userLogin = async (req, res, next) => {
       res.status(400).json({ error: 'Invalid Password' });
     }
   } else {
-    res.status(401).json({ error: 'User does not exist' });
+    res.status(401).json({ error: 'User not found' });
   }
 };
 

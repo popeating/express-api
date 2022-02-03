@@ -2,7 +2,6 @@ const express = require('express');
 const dotenv = require('dotenv');
 
 dotenv.config();
-// console.log(process.env.SECRET_TOKEN);
 
 // Create express app
 const app = express();

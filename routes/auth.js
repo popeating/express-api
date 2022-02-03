@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const dotenv = require('dotenv');
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 const { userLogin, tokenRefresh } = require('../middleware/auth');

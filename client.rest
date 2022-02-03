@@ -21,7 +21,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidXNlcm5hb
 ###Get single book by id (Require Authorization Token)
 http://localhost:3000/v1/books/get/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidXNlcm5hbWUiLCJlbWFpbCI6Im1lQGhvbWUub3JnIiwibGV2ZWwiOiIwIiwiaWF0IjoxNjQzODc2MjY3LCJleHAiOjE2NDM4Nzk4Njd9.oprmV-xt3YaivhXcevkw3mriAokBhUCDEI0bnpKZT3I
+
 
 ###Refresh JWT token (require refresh token return a new JWT and refresh token)
 POST http://localhost:3000/v1/auth/refresh

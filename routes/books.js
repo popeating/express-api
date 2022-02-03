@@ -4,7 +4,6 @@ const db = require('../data/books');
 const { verifyToken } = require('../middleware/auth');
 
 router.get('/', verifyToken, async (req, res) => {
-  //    console.log(req.decoded);
   res.json({ message: 'All Books', books: db.books });
 });
 
